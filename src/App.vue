@@ -1,26 +1,21 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <h1>Телепорты</h1>
+    <ul>
+      <li>В точке входа приложения добавить div с идентификатором modal</li>
+      <li>Создать компонент modal-window, который будет появляться в месте расположения #modal</li>
+    </ul>
+  </div>
+  <teleport to="#modal">
+    <modal-window></modal-window>
+  </teleport>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import ModalWindow from './components/ModalWindow.vue'
 export default {
-  name: 'App',
   components: {
-    HelloWorld
+    ModalWindow
   }
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
